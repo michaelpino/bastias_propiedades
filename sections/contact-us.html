@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Cecilia Bastías Propiedades - Contáctenos</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="../img/logo.jpg" alt="Logo Cecilia Bastías Propiedades" width="220" height="100"></a>
+        <nav>
+            <ul class="menu" id="menuHeader">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="../sections/about-us.html">Sobre nosotros</a>
+                </li>
+                <li>
+                    <a href="../sections/arriendos.html">Arriendos</a>
+                </li>
+                <li>
+                    <a href="../sections/ventas.html">Ventas</a>
+                </li>
+                <li>
+                    <a href="../sections/contact-us.html" id="seccionActual">Contáctenos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Formulario de contacto -->
+    <section class="seccionContacto" id="contacto">
+        <img src="../img/contactenos.jpg" alt="Imagen de contacto"  width="1128" height="400">
+        
+        <h2>
+            Contáctenos
+        </h2>
+        <form class="formulario">
+            <p>
+                Ingrese sus datos y le contactaremos a la brevedad:
+            </p>
+            <div>
+                <label for="nombre"></label>
+                <input type="text" name="nombre" placeholder="Nombre" size="35" required />
+            </div>
+            <div>
+                <label for="email"></label>
+                <input type="text" name="email" placeholder="E-Mail" size="35" required />
+            </div>
+            <div>
+                <label for="telefono"></label>
+                <input type="text" name="telefono" placeholder="Teléfono" size="35" />
+            </div>
+            <div>
+                <label for="motivo_consulta"></label>
+                <select name="motivo_consulta">
+                    <option value="Venta">Venta</option>
+                    <option value="Arriendo">Arriendo</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div>
+                <label for="consulta"></label>
+                <textarea type="text" name="consulta" placeholder="Detalles de consulta" cols="35" rows="4"></textarea>
+            </div>
+            <div>
+                <input class="btn" type="submit" value="Enviar solicitud" />
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div id="logoConMenu">
+            <a href="../index.html"><img class="logo" src="../img/logo.jpg" alt="Logo Cecilia Bastías Propiedades"
+                    width="220" height="100"></a>
+            <ul class="menu" id="menuFooter">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="../sections/about-us.html">Sobre nosotros</a>
+                </li>
+                <li>
+                    <a href="../sections/arriendos.html">Arriendos</a>
+                </li>
+                <li>
+                    <a href="../sections/ventas.html">Ventas</a>
+                </li>
+                <li>
+                    <a href="../sections/contact-us.html">Contáctenos</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <form class="formulario">
+                <p>
+                    Suscríbase a nuestro boletín semanal de propiedades
+                </p>
+                <div>
+                    <label for="email_boletin"></label>
+                    <input type="email" name="email_boletin" placeholder="Ingrese su E-Mail" />
+                    <input class="btn" type="submit" value="Suscribirme" />
+                </div>
+            </form>
+            <div id="rrss">
+                <a href="http://www.google.com"><img src="../img/rrss_facebook.png" alt="Redes sociales Facebook" width="24"
+                    height="24"></a>
+                <a href="http://www.google.com"><img src="../img/rrss_twitter.png" alt="Redes sociales Twitter" width="24"
+                    height="24"></a>
+                <a href="http://www.google.com"><img src="../img/rrss_instagram.png" alt="Redes sociales Instagram"
+                    width="24" height="24"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
