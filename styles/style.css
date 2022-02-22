@@ -6,8 +6,47 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
     background-color: #EEEDE7;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+}
+
+#gridPadreIndex {
+    grid-template-areas: 
+        "header"
+        "menu_principal"
+        "portada"
+        "caracteristicas"
+        "destacados"
+        "contacto"
+        "footer"
+    ;
+}
+
+#gridPadreAbout {
+    grid-template-areas: 
+        "header"
+        "menu_principal"
+        "descripcion"
+        "caracteristicas"
+        "footer"
+    ;
+}
+
+#gridPadreVentasArriendos{
+    grid-template-areas: 
+        "header"
+        "menu_principal"
+        "destacados"
+        "footer"
+    ;
+}
+
+#gridPadreContacto{
+    grid-template-areas: 
+        "header"
+        "menu_principal"
+        "contacto"
+        "footer"
+    ;
 }
 
 header{
@@ -15,10 +54,17 @@ header{
     padding-bottom: 5px;
     background-color: #868B8E;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    /*position: fixed;*/
+    grid-area: header;
+}
+
+nav{
+    background-color: #868B8E;
+    display: flex;
+    justify-content: center;
+    grid-area: menu_principal;
 }
 
 footer{
@@ -29,24 +75,12 @@ footer{
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
+    grid-area: footer;
 }
 
 #logoConMenu {
     display: flex;
 }
-
-nav{
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-
-
-div {
-    
-    margin: 10px;
-}
-
 
 h1 {
     padding: 10px;
@@ -65,35 +99,36 @@ h4 {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    font-size: xx-large;
-    padding-top: 260px;
-    padding-bottom: 260px;
+    font-size: x-large;
+    padding: 60px;
     background-image: url("../img/fondo_portada ver3.jpg");
     background-position:center;
     background-size: contain;
+    grid-area: portada;
 }
 
 .seccionCaracDistintivas {
     display: flex;
-    align-items: center;
     text-align: center;
-    flex-direction: row;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    flex-direction: column;
+    padding: 30px;
+    grid-area: caracteristicas;
 }
 
 .seccionDestacados {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 100px;
+    grid-area: destacados;
 }
 
 .fichaPropiedad {
     display: flex;
-    flex-flow: row wrap;
-    border-style: solid;
+    flex-flow: column wrap;
+}
 
+.fichaPropiedad div{
+    padding: 20px;
 }
 
 .seccionContacto {
@@ -104,6 +139,12 @@ h4 {
     padding-bottom: 100px;
     padding-top: 50px;
     font-size: large;
+    grid-area: contacto;
+}
+
+.seccionContacto img {
+    width: 100%;
+    height: auto;
 }
 
 .formulario {
@@ -126,8 +167,6 @@ h4 {
   padding: 2px 24px;
 }
 
-
-
 .logo {
     border-radius: 10%;
     margin: 10px;
@@ -137,7 +176,7 @@ h4 {
     display: flex;
     flex-wrap: nowrap;
     list-style-type: none;
-    color: #EEEDE7;
+    color: #0a0905;
 }
 
 .menu li {
@@ -150,6 +189,11 @@ h4 {
     padding-top: 50px;
     padding-bottom: 100px;
     text-align: center;
+    grid-area: descripcion;
+}
+
+.variosArticulos div {
+    padding: 20px;
 }
 
 #menuHeader {
@@ -188,4 +232,112 @@ a:hover {
   
 a:active {
     text-decoration: underline;
+}
+
+
+/* Responsiveness - Tablet */
+@media screen and (min-width: 768px) {
+    
+    header{
+        flex-direction: row;
+    }
+
+    .seccionCaracDistintivas {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: row;
+        padding: 50px;
+    }
+
+    .fichaPropiedad {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .variosArticulos {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .seccionContacto img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+/* Responsiveness - Desktop */
+@media screen and (min-width: 1024px) {
+    #gridPadreIndex {
+        grid-template-areas: 
+            "header     menu_principal"
+            "portada    portada"
+            "caracteristicas    caracteristicas"
+            "destacados     destacados"
+            "contacto   contacto"
+            "footer     footer"
+        ;
+    }
+
+    #gridPadreAbout {
+        grid-template-areas: 
+            "header     menu_principal"
+            "descripcion    descripcion"
+            "caracteristicas    caracteristicas"
+            "footer     footer"
+        ;
+    }
+
+    #gridPadreVentasArriendos {
+        grid-template-areas: 
+            "header     menu_principal"
+            "destacados    destacados"
+            "footer     footer"
+        ;
+    }
+
+    #gridPadreContacto {
+        grid-template-areas: 
+            "header     menu_principal"
+            "contacto    contacto"
+            "footer     footer"
+        ;
+    }
+    
+    nav{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .seccionPortada {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        font-size: xx-large;
+        padding-top: 260px;
+        padding-bottom: 260px;
+        background-image: url("../img/fondo_portada ver3.jpg");
+        background-position:center;
+        background-size: contain;
+    }
+
+    .seccionCaracDistintivas {
+        font-size: x-large;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .fichaPropiedad {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-style: solid;
+    }
+
+    .variosArticulos {
+        font-size: x-large;
+    }
+
 }
