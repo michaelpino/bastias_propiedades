@@ -61,7 +61,7 @@ header{
 }
 
 nav{
-    background-color: #868B8E;
+    background-image: linear-gradient(to bottom,#868B8E, #EEEDE7);
     display: flex;
     justify-content: center;
     grid-area: menu_principal;
@@ -70,7 +70,8 @@ nav{
 footer{
     padding-top: 5px;
     padding-bottom: 20px;
-    background-color: #868B8E;
+    /* background-color: #868B8E; */
+    background-image: linear-gradient(to bottom, #EEEDE7, #868B8E);
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -306,9 +307,14 @@ a:active {
         ;
     }
     
+    header{
+        background-image: linear-gradient(to bottom,#868B8E,#868B8E, #EEEDE7);
+    }
+    
     nav{
         flex-direction: row-reverse;
         align-items: center;
+        background-image: linear-gradient(to bottom,#868B8E,#868B8E, #EEEDE7);
     }
 
     .seccionPortada {
