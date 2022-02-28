@@ -70,7 +70,6 @@ nav{
 footer{
     padding-top: 5px;
     padding-bottom: 20px;
-    /* background-color: #868B8E; */
     background-image: linear-gradient(to bottom, #EEEDE7, #868B8E);
     display: flex;
     flex-flow: row nowrap;
@@ -146,23 +145,6 @@ h4 {
 .fichasDestacados div:hover{
     transform: scale(1.05, 1.05);
 }
-
-/* .fichaPropiedad {
-    display: flex;
-    flex-flow: column wrap;
-} */
-
-/* .fichaPropiedad div{
-    padding: 20px;
-}
-
-.fichaPropiedad img{
-    transition: all 0.5s;
-}
-
-.fichaPropiedad img:hover{
-    transform: scale(1.05, 1.05);
-} */
 
 .seccionContacto {
     display: flex;
@@ -293,12 +275,6 @@ a:active {
         padding: 50px;
     }
 
-    .fichaPropiedad{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-
     .fichasDestacados{
         display: flex;
         align-items: center;
@@ -385,15 +361,7 @@ a:active {
         padding-bottom: 100px;
     }
 
-    .fichaPropiedad {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        border-style: solid;
-    }
-
     .fichasDestacados {
-        /* grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr; */
         display: flex;
         flex-flow: row wrap;
     }
