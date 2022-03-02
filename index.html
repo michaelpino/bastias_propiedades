@@ -128,24 +128,22 @@
             Contáctenos
         </h2>
         <form class="formulario">
-            <p>
-                Ingrese sus datos y le contactaremos a la brevedad:
-            </p>
-            <div>
-                <label for="nombre"></label>
-                <input type="text" name="nombre" placeholder="Nombre" size="35" required />
+            <div class="form-group">
+                <label for="nombre">Ingrese sus datos y le contactaremos a la brevedad:</label>
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre" required />
             </div>
-            <div>
+            <div class="form-group">
                 <label for="email"></label>
-                <input type="text" name="email" placeholder="E-Mail" size="35" required />
+                <input type="text" name="email" class="form-control" placeholder="E-Mail" required />
             </div>
-            <div>
+            <div class="form-group">
                 <label for="telefono"></label>
-                <input type="text" name="telefono" placeholder="Teléfono" size="35" />
+                <input type="text" name="telefono" class="form-control" placeholder="Teléfono" />
             </div>
             <div>
                 <label for="motivo_consulta"></label>
-                <select name="motivo_consulta">
+                <select name="motivo_consulta" class="form-control input-sm">
+                    <option value="default">Motivo de contacto</option>
                     <option value="Venta">Venta</option>
                     <option value="Arriendo">Arriendo</option>
                     <option value="Otro">Otro</option>
@@ -153,7 +151,7 @@
             </div>
             <div>
                 <label for="consulta"></label>
-                <textarea type="text" name="consulta" placeholder="Detalles de consulta" cols="35" rows="4"></textarea>
+                <textarea type="text" name="consulta"  class="form-control" placeholder="Detalles de consulta" cols="35" rows="4"></textarea>
             </div>
             <div>
                 <input class="btn" type="submit" value="Enviar solicitud" />
