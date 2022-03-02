@@ -108,10 +108,7 @@ h4 {
 }
 
 .seccionCaracDistintivas {
-    display: flex;
     text-align: center;
-    flex-direction: column;
-    padding: 30px;
     grid-area: caracteristicas;
 }
 
@@ -197,16 +194,8 @@ h4 {
 }
 
 .variosArticulos {
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 100px;
     text-align: center;
     grid-area: descripcion;
-}
-
-.variosArticulos div {
-    padding: 20px;
 }
 
 #menuHeader {
@@ -260,16 +249,7 @@ a:active {
     }
 
     .seccionCaracDistintivas {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        flex-direction: row;
         padding: 50px;
-    }
-
-    .variosArticulos {
-        flex-direction: row;
-        justify-content: center;
     }
 
     .seccionContacto img {
@@ -344,10 +324,6 @@ a:active {
         font-size: x-large;
         padding-top: 100px;
         padding-bottom: 100px;
-    }
-
-    .variosArticulos {
-        font-size: x-large;
     }
 
 }
