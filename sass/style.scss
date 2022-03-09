@@ -1,0 +1,267 @@
+@import "variables";
+@import "general";
+@import "footer";
+
+#gridPadreIndex {
+    grid-template-areas: 
+        "header"
+        "menu_principal"
+        "portada"
+        "caracteristicas"
+        "destacadosIndex"
+        "contacto"
+        "footer"
+    ;
+}
+
+#gridPadreAbout {
+    grid-template-areas: 
+        "header"
+        "menu_principal"
+        "descripcion"
+        "caracteristicas"
+        "footer"
+    ;
+}
+
+#gridPadreVentasArriendos{
+    grid-template-areas: 
+        "header"
+        "menu_principal"
+        "destacados"
+        "footer"
+    ;
+}
+
+#gridPadreContacto{
+    grid-template-areas: 
+        "header"
+        "menu_principal"
+        "contacto"
+        "footer"
+    ;
+}
+
+header{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: $color_piedra;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+
+nav{
+    background-image: linear-gradient(to bottom,$color_piedra, $color_marfil);
+    display: flex;
+    justify-content: center;
+    grid-area: menu_principal;
+}
+
+
+#logoConMenu {
+    display: flex;
+}
+
+.seccionPortada {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: x-large;
+    padding: 60px;
+    background-image: url("../img/fondo_portada ver3.jpg");
+    background-position:center;
+    background-size: contain;
+    grid-area: portada;
+}
+
+.seccionCaracDistintivas {
+    text-align: center;
+    grid-area: caracteristicas;
+}
+
+/* Esta DESTACADOS la dejo distinta a la otra porque tendra venta y arriendos juntos, por lo que su formato podría cambiar a futuro */
+.seccionDestacadosIndex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-area: destacadosIndex;
+}
+
+.seccionDestacados{
+    display: grid;
+    text-align: center;
+    grid-area: destacados;
+    padding: 20px;
+}
+
+.fichasDestacados {
+    div{
+        padding: 5px;
+        transition: all 0.5s;
+        &:hover{
+            transform: scale(1.05, 1.05);
+            }
+    }
+}
+
+.seccionContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    font-size: large;
+    grid-area: contacto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.formulario {
+    text-align: center;
+    background-color: $gris_claro;
+    padding: 20px;
+}
+
+.btn {
+  align-items: center;
+  appearance: none;
+  background-color: #ffffff;
+  border-radius: 24px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  height: 48px;
+  overflow: visible;
+  padding: 2px 24px;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.05, 1.05);
+    background-color: $color_marfil;
+    }
+}
+
+.logo {
+    border-radius: 10%;
+    margin: 10px;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    color: #0a0905;
+    li {
+        padding-right: 20px;
+    }
+}
+
+.variosArticulos {
+    text-align: center;
+    grid-area: descripcion;
+}
+
+#menuHeader {
+    flex-direction: row;
+    font-size: large;
+    text-align: center;
+}
+
+#seccionActual {
+    text-decoration: underline;
+}
+
+/* Responsiveness - Tablet */
+@media screen and (min-width: 768px) {
+    
+    header{
+        flex-direction: row;
+    }
+
+    .seccionCaracDistintivas {
+        padding: 50px;
+    }
+
+    .seccionContacto {
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+
+/* Responsiveness - Desktop */
+@media screen and (min-width: 1024px) {
+    #gridPadreIndex {
+        grid-template-areas: 
+            "header     menu_principal"
+            "portada    portada"
+            "caracteristicas    caracteristicas"
+            "destacadosIndex    destacadosIndex"
+            "contacto   contacto"
+            "footer     footer"
+        ;
+    }
+
+    #gridPadreAbout {
+        grid-template-areas: 
+            "header     menu_principal"
+            "descripcion    descripcion"
+            "caracteristicas    caracteristicas"
+            "footer     footer"
+        ;
+    }
+
+    #gridPadreVentasArriendos {
+        grid-template-areas: 
+            "header     menu_principal"
+            "destacados    destacados"
+            "footer     footer"
+        ;
+    }
+
+    #gridPadreContacto {
+        grid-template-areas: 
+            "header     menu_principal"
+            "contacto    contacto"
+            "footer     footer"
+        ;
+    }
+    
+    header{
+        background-image: linear-gradient(to bottom,$color_piedra,$color_piedra, $color_marfil);
+    }
+    
+    nav{
+        flex-direction: row-reverse;
+        align-items: center;
+        background-image: linear-gradient(to bottom,$color_piedra,$color_piedra, $color_marfil);
+    }
+
+    .seccionPortada {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        font-size: xx-large;
+        padding-top: 260px;
+        padding-bottom: 260px;
+        background-image: url("../img/fondo_portada ver3.jpg");
+        background-position:center;
+        background-size: contain;
+    }
+
+    .seccionCaracDistintivas {
+        font-size: x-large;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+}
