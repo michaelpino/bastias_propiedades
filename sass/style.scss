@@ -132,7 +132,7 @@ nav{
 .btn {
   align-items: center;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #f0e9e9;
   border-radius: 24px;
   color: black;
   font-size: 14px;
@@ -145,6 +145,11 @@ nav{
     transform: scale(1.05, 1.05);
     background-color: map-get($paleta_colores,color_marfil);
     }
+}
+
+.btn--principal{
+    @extend .btn;
+    background-color: #eafdec;
 }
 
 .logo {

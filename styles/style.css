@@ -135,10 +135,10 @@ nav {
   background-color: #B9B7BD;
   padding: 20px; }
 
-.btn {
+.btn, .btn--principal {
   align-items: center;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #f0e9e9;
   border-radius: 24px;
   color: black;
   font-size: 14px;
@@ -147,9 +147,12 @@ nav {
   overflow: visible;
   padding: 2px 24px;
   transition: all 0.5s; }
-  .btn:hover {
+  .btn:hover, .btn--principal:hover {
     transform: scale(1.05, 1.05);
     background-color: #EEEDE7; }
+
+.btn--principal {
+  background-color: #eafdec; }
 
 .logo {
   border-radius: 10%;
