@@ -69,8 +69,8 @@ header {
   background-color: #868B8E;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   grid-area: header; }
 
 nav {
@@ -84,9 +84,9 @@ nav {
 
 .seccionPortada {
   display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  flex-direction: column;
   font-size: x-large;
   padding: 60px;
   background-image: url("../img/fondo_portada ver3.jpg");
@@ -101,8 +101,8 @@ nav {
 /* Esta DESTACADOS la dejo distinta a la otra porque tendra venta y arriendos juntos, por lo que su formato podría cambiar a futuro */
 .seccionDestacadosIndex {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   grid-area: destacadosIndex; }
 
 .seccionDestacados {
@@ -206,9 +206,9 @@ nav {
     background-image: linear-gradient(to bottom, #868B8E, #868B8E, #EEEDE7); }
   .seccionPortada {
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-direction: column;
     font-size: xx-large;
     padding-top: 260px;
     padding-bottom: 260px;

@@ -46,10 +46,8 @@ header{
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: map-get($paleta_colores, color_piedra);
-    display: flex;
-    flex-direction: column;
+    @include flex-column-center;
     justify-content: center;
-    align-items: center;
     grid-area: header;
 }
 
@@ -66,10 +64,8 @@ nav{
 }
 
 .seccionPortada {
-    display: flex;
-    align-items: center;
+    @include flex-column-center;
     text-align: center;
-    flex-direction: column;
     font-size: x-large;
     padding: 60px;
     background-image: url("../img/fondo_portada ver3.jpg");
@@ -85,9 +81,7 @@ nav{
 
 /* Esta DESTACADOS la dejo distinta a la otra porque tendra venta y arriendos juntos, por lo que su formato podría cambiar a futuro */
 .seccionDestacadosIndex {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flex-column-center;
     grid-area: destacadosIndex;
 }
 
@@ -109,9 +103,7 @@ nav{
 }
 
 .seccionContacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
     align-content: center;
     padding-bottom: 100px;
     padding-top: 50px;
@@ -251,10 +243,8 @@ nav{
     }
 
     .seccionPortada {
-        display: flex;
-        align-items: center;
+        @include flex-column-center;
         text-align: center;
-        flex-direction: column;
         font-size: xx-large;
         padding-top: 260px;
         padding-bottom: 260px;
