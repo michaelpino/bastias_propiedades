@@ -39,7 +39,7 @@ footer {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-around;
-  grid-area: footer; }
+  grid-area: footer_; }
 
 #menuFooter {
   flex-direction: column; }
@@ -52,16 +52,16 @@ footer {
     transform: scale(1.1, 1.1); }
 
 #gridPadreIndex {
-  grid-template-areas: "header" "menu_principal" "portada" "caracteristicas" "destacadosIndex" "contacto" "footer"; }
+  grid-template-areas: "header_" "menu_principal" "portada" "caracteristicas" "destacadosIndex" "contacto" "footer_"; }
 
 #gridPadreAbout {
-  grid-template-areas: "header" "menu_principal" "descripcion" "caracteristicas" "footer"; }
+  grid-template-areas: "header_" "menu_principal" "descripcion" "caracteristicas" "footer_"; }
 
 #gridPadreVentasArriendos {
-  grid-template-areas: "header" "menu_principal" "destacados" "footer"; }
+  grid-template-areas: "header_" "menu_principal" "destacados" "footer_"; }
 
 #gridPadreContacto {
-  grid-template-areas: "header" "menu_principal" "contacto" "footer"; }
+  grid-template-areas: "header_" "menu_principal" "contacto" "footer_"; }
 
 header {
   padding-top: 5px;
@@ -71,7 +71,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  grid-area: header; }
+  grid-area: header_; }
 
 nav {
   background-image: linear-gradient(to bottom, #868B8E, #EEEDE7);
@@ -191,13 +191,13 @@ nav {
 /* Responsiveness - Desktop */
 @media screen and (min-width: 1024px) {
   #gridPadreIndex {
-    grid-template-areas: "header     menu_principal" "portada    portada" "caracteristicas    caracteristicas" "destacadosIndex    destacadosIndex" "contacto   contacto" "footer     footer"; }
+    grid-template-areas: "header_     menu_principal" "portada    portada" "caracteristicas    caracteristicas" "destacadosIndex    destacadosIndex" "contacto   contacto" "footer_     footer_"; }
   #gridPadreAbout {
-    grid-template-areas: "header     menu_principal" "descripcion    descripcion" "caracteristicas    caracteristicas" "footer     footer"; }
+    grid-template-areas: "header_     menu_principal" "descripcion    descripcion" "caracteristicas    caracteristicas" "footer_     footer_"; }
   #gridPadreVentasArriendos {
-    grid-template-areas: "header     menu_principal" "destacados    destacados" "footer     footer"; }
+    grid-template-areas: "header_     menu_principal" "destacados    destacados" "footer_     footer_"; }
   #gridPadreContacto {
-    grid-template-areas: "header     menu_principal" "contacto    contacto" "footer     footer"; }
+    grid-template-areas: "header_     menu_principal" "contacto    contacto" "footer_     footer_"; }
   header {
     background-image: linear-gradient(to bottom, #868B8E, #868B8E, #EEEDE7); }
   nav {

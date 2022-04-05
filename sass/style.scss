@@ -4,41 +4,41 @@
 
 #gridPadreIndex {
     grid-template-areas: 
-        "header"
+        "header_"
         "menu_principal"
         "portada"
         "caracteristicas"
         "destacadosIndex"
         "contacto"
-        "footer"
+        "footer_"
     ;
 }
 
 #gridPadreAbout {
     grid-template-areas: 
-        "header"
+        "header_"
         "menu_principal"
         "descripcion"
         "caracteristicas"
-        "footer"
+        "footer_"
     ;
 }
 
 #gridPadreVentasArriendos{
     grid-template-areas: 
-        "header"
+        "header_"
         "menu_principal"
         "destacados"
-        "footer"
+        "footer_"
     ;
 }
 
 #gridPadreContacto{
     grid-template-areas: 
-        "header"
+        "header_"
         "menu_principal"
         "contacto"
-        "footer"
+        "footer_"
     ;
 }
 
@@ -48,7 +48,7 @@ header{
     background-color: map-get($paleta_colores, color_piedra);
     @include flex-column-center;
     justify-content: center;
-    grid-area: header;
+    grid-area: header_;
 }
 
 nav{
@@ -198,37 +198,37 @@ nav{
 @media screen and (min-width: 1024px) {
     #gridPadreIndex {
         grid-template-areas: 
-            "header     menu_principal"
+            "header_     menu_principal"
             "portada    portada"
             "caracteristicas    caracteristicas"
             "destacadosIndex    destacadosIndex"
             "contacto   contacto"
-            "footer     footer"
+            "footer_     footer_"
         ;
     }
 
     #gridPadreAbout {
         grid-template-areas: 
-            "header     menu_principal"
+            "header_     menu_principal"
             "descripcion    descripcion"
             "caracteristicas    caracteristicas"
-            "footer     footer"
+            "footer_     footer_"
         ;
     }
 
     #gridPadreVentasArriendos {
         grid-template-areas: 
-            "header     menu_principal"
+            "header_     menu_principal"
             "destacados    destacados"
-            "footer     footer"
+            "footer_     footer_"
         ;
     }
 
     #gridPadreContacto {
         grid-template-areas: 
-            "header     menu_principal"
+            "header_     menu_principal"
             "contacto    contacto"
-            "footer     footer"
+            "footer_     footer_"
         ;
     }
     
